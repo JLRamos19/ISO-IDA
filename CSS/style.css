@@ -1,0 +1,414 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+}
+
+
+header a{
+	text-decoration: none;
+	color: black;
+}
+
+
+
+/* Logo style */
+
+#logo::after{
+	display: block;
+	position: relative;
+	content: '';
+	background-color: #BCC3BE;
+	height: 1.5vw;
+	width: 72.5%;
+}
+
+.logoFont1{
+	font-family: restora;
+	font-weight: lighter;
+	font-size: 40px;
+	letter-spacing: 7.5px;
+	vertical-align: middle;
+}
+
+.logoFont2{
+	font-family: mrs saint delafield;
+	font-weight: normal;
+	font-size: 40px;
+	padding: 0 26px 0 13px;
+	position: relative;
+	vertical-align: middle;
+}
+
+/* Menu */
+
+#menu{
+	float: left;
+	width: 85%;
+	display: flex;
+	margin: 0 auto;
+}
+
+#menu a{
+	font-family: leksa sans;
+	font-weight: lighter;
+	padding: 0 2.5%;
+	font-size: 24px;
+	z-index: 1;
+}
+
+#menu a:hover{
+	border-bottom: thick #525b56 solid;
+}
+
+#menuIcons{
+	float: right;
+	width: 15%;
+	text-align: end;
+}
+
+#menuIcons span{
+	font-size: 24px;
+	padding-left: 8px;
+	cursor: pointer;
+}
+
+
+body{
+	background-color: #fffcf5;
+	margin: 0 10%;
+}
+
+main{
+	top: 90px;
+	position: absolute;
+	width: 80%;
+}
+
+#homeMain::before{
+	content: '';
+	display: block;
+	position: absolute;
+	background-color: #BCC3BE;
+	height: 65%;
+	width: 100%;
+	z-index: -1;
+	top: 32px;
+}
+
+#homeMain{
+	display: block;
+	padding-top: 10%;
+	position: relative;
+}
+
+/* Buttons */
+
+button{
+	display: flex;
+	position: absolute;
+	font-family: restora;
+	font-weight: 100;
+	font-size: 1.2vw;
+	letter-spacing: .15vw;
+	border: none;
+	border-radius: 0;
+	background-color: rgba(255,255,255,0.65);
+	padding: .75% 1%;
+	cursor: pointer;
+}
+
+#newArrivals:hover{
+	color: white;
+	background-color: rgba(255,255,255,0.65);
+}
+
+button:hover{
+	background-color: white;
+}
+
+/* Button in Home's Main */
+
+#homeMain button{
+	top: 75%;
+	left: 77.5%;
+}
+
+#homeMain::after{
+	position: relative;
+	content: '';
+	height: 1.5vw;
+	background-color: #BCC3BE;
+	display: block;
+	float: right;
+	width: 65%;
+}
+
+/* Background boxes */
+
+#homeGroupShot{
+	
+	display: block;
+	width: 85%;
+	margin: 0 auto;
+}
+
+/* Headings */
+
+h2{
+	font-family: restora;
+	font-weight: 100;
+	font-size: 24px;
+	letter-spacing: 4px;
+	text-align: left;
+	padding-bottom: 1vw;
+}
+
+h3{
+	color: white;
+	font-family: leksa sans;
+	font-size: 24px;
+}
+
+/* Home's Article */
+
+#homeArticle{
+	padding-top: 50vw;
+	display: block;
+}
+
+/* Home's Sections */
+
+#homeMostWanted{
+	position: absolute;
+	display: flex;
+	width: 80%;
+}
+
+#homeMostWanted img{
+	display: block;
+	width: 50%;
+	margin: 0 auto;
+}
+
+#homeMostWanted button{
+	display: block;
+	margin: .75vw auto;
+	position: relative;
+	
+}
+
+#homeMostWanted::after{
+	content: '';
+	display: block;
+	position: absolute;
+	background-color: #BCC3BE;
+	height: 80%;
+	width: 100%;
+	z-index: -1;
+	top: 6vw;
+}
+
+/* Home's Styling Section */
+
+#homeSectionStyling{
+	margin-top: 32vw;
+}
+
+#homeStyling{
+	position: relative;
+}
+
+#homeStylingImages{
+	display: flex;
+}
+
+#homeStylingImages img{
+	width: 25%;
+	
+}
+
+#homeStylingCenterImg{
+	margin: 0 auto;
+}
+
+#homeStyling::after{
+	content: '';
+	display: block;
+	position: absolute;
+	background-color: #BCC3BE;
+	height: 1vw;
+	width: 59.5vw;
+	margin-top: 1.5vw;
+}
+
+/* ------ Earrings Styles ------ */
+
+#earringsArticle{
+	padding-top: 100px;
+}
+
+.earringsSection{
+	width: 100%;
+	height: 100%;
+}
+
+.earringsItemBox{
+	flex-direction: column;
+	display: inline-flex;
+	width: 29%;
+	margin: 0 1.5%;
+}
+
+.earringsSection img{
+	border: medium #525b56 solid;
+	
+}
+
+
+.earringsSection p{
+	color: black;
+	font-size: 26px;
+	font-weight: 300;
+	display: inline-flex;
+}
+
+.earringsInfoBox{
+	margin: 10px 0 55px;
+}
+
+.earringItemName{
+	float: left;
+	text-align: left;
+}
+
+.earringItemPrice{
+	float: right;
+	text-align: right;
+}
+
+#earringsSection1::before{
+	content: '';
+	display: block;
+	position: relative;
+	background-color: #BCC3BE;
+	height: 65%;
+	width: 80%;
+	z-index: -1;
+	
+}
+
+/* Footer */
+
+footer{
+	margin-top: 4.5vw;
+	background-color: #525b56;
+	margin-bottom: 1vw;
+}
+
+footer h3, li, a, p, input{
+	text-align: left;
+	color: white;
+	text-decoration: none;
+	list-style: none;
+	font-family: leksa sans;
+}
+
+footer h3{
+	padding-top: 80px;
+}
+
+footer a, p{
+	font-size: 16px;
+	font-weight: lighter;
+}
+
+footer li{
+	padding-top: 5px;
+	
+}
+
+footer h3, li{
+	padding-left: 80px;
+}
+
+footer input{
+	margin-top: 15px;
+	padding: 10px;
+	font-size: 16px;
+	color: black;
+}
+
+.footerKeepInTouch{
+	display: flex;
+	flex-direction: column;
+	margin-left: auto;
+	margin-right: 3vw;
+}
+
+.footerKeepInTouch h3{
+	padding-left: 0px;
+	
+}
+
+#footerSubmitEmail{
+	font-size: 30px;
+	position: absolute;
+	margin-top: 155px;
+	margin-left: 237.5px;
+	background-color: #BCC3BE;
+	cursor: pointer;
+	color: white;
+}
+
+#footerSubmitEmail:hover{
+	color: #525b56;
+}
+
+.footerTop{
+	display: flex;
+}
+
+.footerBottomPrint{
+	position: relative;
+	margin: 0 auto;
+}
+
+.footerBottomPrint p{
+	text-align: center;
+	padding-top: 40px;
+	font-size: 22px;
+}
+
+/* Responsive Webpage Settings */
+
+@media screen and (max-width: 800px){
+	body{
+		margin: 0;
+	}
+	
+	#homeSection1{
+		width: 100%;
+	}
+
+	#homeSection1 img{
+		margin: 0;
+		width: 100%;
+	}
+	
+	#homeRightImage img{
+	}
+	
+	#homeLeftImage{
+	}
+	
+	#homeRightImage{
+	}
+}
+
