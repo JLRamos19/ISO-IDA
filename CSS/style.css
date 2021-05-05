@@ -49,28 +49,61 @@ header a{
 /* Menu */
 
 #menu{
-	float: left;
-	width: 85%;
 	display: flex;
-	margin: 0 auto;
+	position: relative;
+	justify-content: flex-end;
 }
 
-#menu a{
-	font-family: leksa sans;
-	font-weight: lighter;
-	padding: 0 2.5%;
+#menuDropDown ul{
+	list-style: none;
+	
+}
+
+.menuSection{
+}
+
+#menuDropDown{
+	display: flex;
+	
+}
+
+#menuDropDown span{
 	font-size: 24px;
+	font-family: leksa sans;
+	padding: 0 10px;
+	margin: 0 10px;
+	cursor: pointer;
+}
+
+.menuSection:hover .menuList{
+	display: block;
+	position: absolute;
+	animation: dropDown 1s;
+	background-color: rgba(255,255,255,0.65);
+}
+
+/* Menu Animation */
+
+@keyframes dropDown{
+	0%{
+		opacity: 0;
+	}
+	
+	100%{
+		opacity: 1;
+		background-color: rgba(255,255,255,0.65);
+	}
+}
+
+.menuList{
+	display: none;
 	z-index: 1;
 }
 
-#menu a:hover{
-	border-bottom: thick #525b56 solid;
-}
-
 #menuIcons{
-	float: right;
-	width: 15%;
-	text-align: end;
+	display: flex;
+	padding: 5px;
+	justify-content: center;
 }
 
 #menuIcons span{
@@ -80,13 +113,13 @@ header a{
 }
 
 
+
 body{
 	background-color: #fffcf5;
 	margin: 0 10%;
 }
 
 main{
-	top: 90px;
 	position: absolute;
 	width: 80%;
 }
@@ -96,15 +129,15 @@ main{
 	display: block;
 	position: absolute;
 	background-color: #BCC3BE;
-	height: 65%;
+	height: 30vw;
 	width: 100%;
 	z-index: -1;
-	top: 32px;
+	top: -100px;
 }
 
 #homeMain{
 	display: block;
-	padding-top: 10%;
+	margin-top: 100px;
 	position: relative;
 }
 
@@ -254,33 +287,46 @@ h3{
 	padding-top: 100px;
 }
 
+#earringsArticle h2{
+	font-size: 30px;
+	margin-left: 8.8%;
+	font-weight: bold;
+	letter-spacing: 2.125px;
+}
+
 .earringsSection{
 	width: 100%;
 	height: 100%;
+	display: flex;
+	justify-content: space-between;
 }
 
 .earringsItemBox{
 	flex-direction: column;
 	display: inline-flex;
-	width: 29%;
-	margin: 0 1.5%;
+	align-items: center;
+	
 }
 
 .earringsSection img{
 	border: medium #525b56 solid;
-	
+	width: 80%;
 }
 
 
 .earringsSection p{
 	color: black;
-	font-size: 26px;
+	font-size: 22px;
 	font-weight: 300;
-	display: inline-flex;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 2.5%;
+	font-family: leksa sans;
 }
 
 .earringsInfoBox{
 	margin: 10px 0 55px;
+	width: 80%;
 }
 
 .earringItemName{
@@ -293,13 +339,25 @@ h3{
 	text-align: right;
 }
 
+/* 
+	content: '';
+	display: block;
+	position: absolute;
+	background-color: #BCC3BE;
+	height: 30vw;
+	width: 100%;
+	z-index: -1;
+	top: -100px;
+*/
+
 #earringsSection1::before{
 	content: '';
 	display: block;
-	position: relative;
+	position: absolute;
 	background-color: #BCC3BE;
-	height: 65%;
+	height: 22.5vw;
 	width: 80%;
+	top: 100px;
 	z-index: -1;
 	
 }
@@ -312,7 +370,7 @@ footer{
 	margin-bottom: 1vw;
 }
 
-footer h3, li, a, p, input{
+footer h3, footer li, footer a, footer p, footer input{
 	text-align: left;
 	color: white;
 	text-decoration: none;
@@ -324,18 +382,13 @@ footer h3{
 	padding-top: 80px;
 }
 
-footer a, p{
+footer a, footer p{
 	font-size: 16px;
 	font-weight: lighter;
 }
 
 footer li{
 	padding-top: 5px;
-	
-}
-
-footer h3, li{
-	padding-left: 80px;
 }
 
 footer input{
@@ -345,17 +398,29 @@ footer input{
 	color: black;
 }
 
-.footerKeepInTouch{
+.footerTop{
 	display: flex;
-	flex-direction: column;
-	margin-left: auto;
-	margin-right: 3vw;
+	justify-content: space-between;
+	margin: 0 5%;
 }
 
-.footerKeepInTouch h3{
-	padding-left: 0px;
-	
+.footerTopLeft{
+	flex-direction: row;
+	display: flex;
+	width: 50%;
 }
+
+.footerTopRight{
+	display: flex;
+	flex-direction: column;
+}
+
+.footerMenu{
+	display: flex;
+	flex-direction: column;
+	margin-right: 10%;
+}
+
 
 #footerSubmitEmail{
 	font-size: 30px;
@@ -371,9 +436,7 @@ footer input{
 	color: #525b56;
 }
 
-.footerTop{
-	display: flex;
-}
+
 
 .footerBottomPrint{
 	position: relative;
@@ -393,6 +456,8 @@ footer input{
 		margin: 0;
 	}
 	
+	/* Home styles */
+	
 	#homeSection1{
 		width: 100%;
 	}
@@ -410,5 +475,28 @@ footer input{
 	
 	#homeRightImage{
 	}
+	
+	/* Earrings styles */
+	
+	.earringsSection{
+		justify-content: center;
+	}
+	
+	.earringsSection img{
+		width: 95%;
+	}
+	
+	.earringsItemBox{
+		width: 30%;
+	}
+	
+	.earringsInfoBox{
+		width: 90%;
+	}
+	
+	.earringsSection p{
+		margin: 0;
+	}
+	
 }
 
