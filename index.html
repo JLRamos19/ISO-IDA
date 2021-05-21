@@ -3,7 +3,7 @@
 	
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://use.typekit.net/btj1uvo.css">
 		<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
 		<link rel="stylesheet" href="CSS/style.css">
 		<title>ISO.IDA | Demi-Fine Handmade Jewelry</title>
@@ -12,65 +12,67 @@
 	<body>
 		<!-- Navigation menu -->
 
-		<header>
-			
-			<nav>
-			
-				<div id="logo">
-				  <a href="index.html"><span class="logoFont1">ISOBEL</span><span class="logoFont2">and</span><span class="logoFont1">IDALY</span></a>
-				</div>
-				
-				<div id="menu">
-					<div id="menuDropDown">
-						<div class="menuSection">
-							<span>Shop</span>
-								<ul class="menuList">
-									<li class="menuDropDown-item1"><a href="earrings.html">Earrings</a></li>
-									<li class="menuDropDown-item2"><a href="">Necklaces</a></li>
-									<li class="menuDropDown-item3"><a href="">Rings</a></li>
-								</ul>
+		<div class="mainMenu">
+			<header>
+				<nav>
+					
+					<div class="hamburgerMenu">
+					<span class="material-icons-outlined">menu</span>
+					</div>
+					
+					<div id="logo">
+					  <a href="index.html"><span class="logoFont1">ISOBEL</span><span class="logoFont2">and</span><span class="logoFont1">IDALY</span></a>
+					</div>
+
+					<div id="menu">
+						<div id="menuDropDown">
+							<div class="menuSection">
+								<span>Shop</span>
+									<ul class="menuList">
+										<li class="menuDropDown-item1"><a href="earrings.html">Earrings</a></li>
+										<li class="menuDropDown-item2"><a href="">Necklaces</a></li>
+										<li class="menuDropDown-item3"><a href="">Rings</a></li>
+									</ul>
+							</div>
+					
+							<div class="menuSection">
+								<span>About</span>
+									<ul class="menuList">
+										<li class="menuDropDown-item1"><a href="">Meet us!</a></li>
+										<li class="menuDropDown-item2"><a href="">FAQ</a></li>
+										<li class="menuDropDown-item3"><a href="">Contact us</a></li>
+									</ul>
+							</div>
 						</div>
 						
-						<div class="menuSection">
-							<span>About</span>
-								<ul class="menuList">
-									<li class="menuDropDown-item1"><a href="">Meet us!</a></li>
-									<li class="menuDropDown-item2"><a href="">FAQ</a></li>
-									<li class="menuDropDown-item3"><a href="">Contact us</a></li>
-								</ul>
+						<div id="menuIcons">
+							<span class="material-icons-outlined" id="menuSearch">search</span>
+							<span class="material-icons-outlined">shopping_bag</span>
 						</div>
 					</div>
-
-
-					<div id="menuIcons">
-						<span class="material-icons-outlined">search</span>
-						<span class="material-icons-outlined">shopping_bag</span>
-					</div>
-				</div>
-			</nav>
-		
-		</header>
-		
-		<main>
-		<div id="homeMain">
-			<!-- Image displaying on homepage after menu -->
-			<img src="Images/Home/GroupShot.JPG" alt="Earrings laying on fabric." id="homeGroupShot">
-			<button id="newArrivals">NEW ARRIVALS</button>
+				</nav>
+			</header>
 		</div>
-		</main>
+		
+		<div id="homeMain">
+			<main>
+				<!-- Image displaying on homepage after menu -->
+				<button id="newArrivals">NEW ARRIVALS</button>
+			</main>
+		</div>
 		
 		<article id="homeArticle">
 			<section>
 				<h2>MOST WANTED</h2>
 				<div id="homeMostWanted">
 				
-					<div id="homeLeftImage">
-						<img src="Images/Home/Rumplestilt.jpg" alt="Earrings (Rumplestilt)">
+					<div class="homeMostWantedItems" id="homeLeftImage">
+						<img src="https://s3.amazonaws.com/iso.ida/Images/Home/Rumplestilt.JPG" alt="Earrings (Rumplestilt)">
 						<button>DEMI-FINE</button>
 					</div>
 					
-					<div id="homeRightImage">
-						<img src="Images/Home/GoldenGroup.jpg" alt="Earrings (Golden Group)">
+					<div class="homeMostWantedItems" id="homeRightImage">
+						<img src="https://s3.amazonaws.com/iso.ida/Images/Home/GoldenGroup.JPG" alt="Earrings (Golden Group)">
 						<button>FUN VARIETY</button>
 					</div>
 					
@@ -81,13 +83,18 @@
 			<section id="homeSectionStyling">
 				<h2>STYLING</h2>
 				<div id="homeStyling">
-					
-					<div id="homeStylingImages">
-						<img src="Images/Home/QueenPurple.jpg" alt="Female model reading book and wearing purple dress and displaying earrings">
-						<img src="Images/Home/QueenTerra.jpg" alt="Female model looking at her reflection in the mirror and displaying earrings" id="homeStylingCenterImg">
-						<img src="Images/Home/QueenGreen.jpg" alt="Female model with green dress, touching plant displaying earrings">
+					<div class="homeStylingImages">
+					<img src="https://s3.amazonaws.com/iso.ida/Images/Home/QueenPurple.jpeg" alt="Female model reading book and wearing purple dress and displaying earrings">
 					</div>
-				
+					
+					<div class="homeStylingImages">
+					<img src="https://s3.amazonaws.com/iso.ida/Images/Home/QueenTerra.jpeg" alt="Female model looking at her reflection in the mirror and displaying earrings" id="homeStylingCenterImg">
+					</div>
+					
+					<div class="homeStylingImages">
+					<img src="https://s3.amazonaws.com/iso.ida/Images/Home/QueenGreen.jpeg" alt="Female model with green dress, touching plant displaying earrings">
+					</div>
+					
 				</div>
 			</section>
 		

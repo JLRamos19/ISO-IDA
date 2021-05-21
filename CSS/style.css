@@ -1,13 +1,31 @@
 @charset "utf-8";
+
 /* CSS Document */
+
 *{
 	text-align: center;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
-html{
+/* Custom fonts */
+
+@font-face{
+	font-family: "mrs saint delafield";
+	src: url(https://s3.amazonaws.com/iso.ida/Fonts/mrssaintdelafield-regular-webfont.woff),
+		url(https://s3.amazonaws.com/iso.ida/Fonts/mrssaintdelafield-regular-webfont.woff2);
+}
+
+@font-face{
+	font-family: "restora";
+	src: url(https://s3.amazonaws.com/iso.ida/Fonts/nasir_udin_-_restoraextralight-webfont.woff),
+		url(https://s3.amazonaws.com/iso.ida/Fonts/nasir_udin_-_restoraextralight-webfont.woff2);
+}
+
+body{
+	margin: 0 auto;
 }
 
 
@@ -16,7 +34,13 @@ header a{
 	color: black;
 }
 
+/* Main Menu */
 
+/* Hamburger Menu */
+
+.hamburgerMenu{
+	display: none;
+}
 
 /* Logo style */
 
@@ -69,7 +93,7 @@ header a{
 
 #menuDropDown span{
 	font-size: 24px;
-	font-family: leksa sans;
+	font-family: "leksa-sans";
 	padding: 0 10px;
 	margin: 0 10px;
 	cursor: pointer;
@@ -120,8 +144,12 @@ body{
 }
 
 main{
-	position: absolute;
-	width: 80%;
+	margin: 0 auto;
+	background-image: url("https://s3.amazonaws.com/iso.ida/Images/Home/GroupShot.JPG");
+	background-position: center;
+	background-size: cover;
+	height: 40vw;
+	width: 90%;
 }
 
 #homeMain::before{
@@ -146,7 +174,7 @@ main{
 button{
 	display: flex;
 	position: absolute;
-	font-family: restora;
+	font-family: leksa-sans;
 	font-weight: 100;
 	font-size: 1.2vw;
 	letter-spacing: .15vw;
@@ -170,32 +198,27 @@ button:hover{
 
 #homeMain button{
 	top: 75%;
-	left: 77.5%;
+	left: 80%;
 }
 
 #homeMain::after{
 	position: relative;
 	content: '';
-	height: 1.5vw;
+	height: 1vw;
 	background-color: #BCC3BE;
 	display: block;
 	float: right;
 	width: 65%;
+	margin-left: 35%;
 }
 
 /* Background boxes */
 
-#homeGroupShot{
-	
-	display: block;
-	width: 85%;
-	margin: 0 auto;
-}
 
 /* Headings */
 
 h2{
-	font-family: restora;
+	font-family: leksa-sans;
 	font-weight: 100;
 	font-size: 24px;
 	letter-spacing: 4px;
@@ -205,23 +228,22 @@ h2{
 
 h3{
 	color: white;
-	font-family: leksa sans;
+	font-family: "leksa-sans";
 	font-size: 24px;
+	font-weight: normal;
 }
 
 /* Home's Article */
 
 #homeArticle{
-	padding-top: 50vw;
 	display: block;
 }
 
 /* Home's Sections */
 
 #homeMostWanted{
-	position: absolute;
+	position: relative;
 	display: flex;
-	width: 80%;
 }
 
 #homeMostWanted img{
@@ -251,37 +273,50 @@ h3{
 /* Home's Styling Section */
 
 #homeSectionStyling{
-	margin-top: 32vw;
+	margin-top: 2vw;
 }
 
 #homeStyling{
 	position: relative;
-}
-
-#homeStylingImages{
+	flex-direction: row;
 	display: flex;
+	justify-content: space-between;
 }
 
-#homeStylingImages img{
-	width: 25%;
-	
+.homeStylingImages{
+	width: 30%;
+}
+
+#homeStyling img{
+	width: 100%;
 }
 
 #homeStylingCenterImg{
-	margin: 0 auto;
 }
 
 #homeStyling::after{
 	content: '';
-	display: block;
+	display: flex;
+	justify-content: flex-start;
 	position: absolute;
 	background-color: #BCC3BE;
 	height: 1vw;
 	width: 59.5vw;
-	margin-top: 1.5vw;
+	margin-top: 33.5vw;
 }
 
 /* ------ Earrings Styles ------ */
+
+#earringsHeader::after{
+	content: '';
+	display: block;
+	position: absolute;
+	background-color: #BCC3BE;
+	padding-bottom: 30vw;
+	width: 80%;
+	z-index: -1;
+	
+}
 
 #earringsArticle{
 	padding-top: 100px;
@@ -321,7 +356,7 @@ h3{
 	display: flex;
 	justify-content: space-between;
 	margin: 0 2.5%;
-	font-family: leksa sans;
+	font-family: "leksa-sans";
 }
 
 .earringsInfoBox{
@@ -339,29 +374,6 @@ h3{
 	text-align: right;
 }
 
-/* 
-	content: '';
-	display: block;
-	position: absolute;
-	background-color: #BCC3BE;
-	height: 30vw;
-	width: 100%;
-	z-index: -1;
-	top: -100px;
-*/
-
-#earringsSection1::before{
-	content: '';
-	display: block;
-	position: absolute;
-	background-color: #BCC3BE;
-	height: 22.5vw;
-	width: 80%;
-	top: 100px;
-	z-index: -1;
-	
-}
-
 /* Footer */
 
 footer{
@@ -375,7 +387,7 @@ footer h3, footer li, footer a, footer p, footer input{
 	color: white;
 	text-decoration: none;
 	list-style: none;
-	font-family: leksa sans;
+	font-family: "leksa-sans";
 }
 
 footer h3{
@@ -450,53 +462,259 @@ footer input{
 }
 
 /* Responsive Webpage Settings */
+@media screen and (min-width: 1920px){
+	
+}
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 1023px){
+	
+}
+
+@media screen and (max-width: 767px){
 	body{
 		margin: 0;
 	}
 	
-	/* Home styles */
+	/* Top Bar Menu */
 	
-	#homeSection1{
-		width: 100%;
+	.mainMenu{
+		position: relative;
+		height: 15vw;
 	}
-
-	#homeSection1 img{
+	
+	.hamburgerMenu{
+		margin: auto;
+		display: flex;
+		float: left;
+		width: 10%;
+		z-index: 1;
+		cursor: pointer;
+		position: absolute;
+		margin-top: 4vw;
+		margin-left: 1.5vw;
+	}
+	
+	#logo{
+		width: 100%;
+		display: flex;
+		position: absolute;
+		justify-content: center;
+		z-index: 0;
+		margin-top: 1.25vw;
+	}
+	
+	.logoFont1{
+		font-size: 8vw;
+		letter-spacing: .8vw;
+	}
+	
+	.logoFont2{
+		font-size: 7.5vw;
+		padding: 0 2.5vw 0 .5vw;
+	}
+	
+	#menu{
+		width: 10%;
+		float: right;
+		margin-top: 3.3vw;
+	}
+	
+	#menuIcons span{
+		padding: 0 .5vw;
+	}
+	
+	#menuDropDown{
+		display: none;
+	}
+	
+	#menuIcons{
+		display: flex;
+		float: right;
+		position: relative;
+	}
+	
+	#menuIcons span{
+		font-size: 6vw;
+		padding: 0 2vw;
+	}
+	
+	.material-icons-outlined{
+		padding: 0 2vw;
+		font-size: 7vw;
+	}
+	
+	#menuSearch{
+		display: none;
+	}
+	
+	#logo::after{
+		display: none;
+	}
+	
+	/* Main Image */
+	
+	main{
 		margin: 0;
 		width: 100%;
+		height: 130vw;
+		position: relative;
+		background-size: 218%;
+		background-position: top;
+		background-repeat: no-repeat;
 	}
 	
-	#homeRightImage img{
+	#homeMain::before{
+		display: none;
+	}
+	
+	#homeMain{
+		margin: 0;
+	}
+	
+	#homeGroupShot{
+		width: 100%;
+		overflow: hidden;
+	}
+	
+	#homeMain::after{
+		display: none;
+	}
+
+	/* Buttons */
+	
+	button{
+		display: flex;
+		position: absolute;
+		font-family: leksa-sans;
+		font-weight: 300;
+		font-size: 6vw;
+		letter-spacing: .15vw;
+		border: none;
+		border-radius: 0;
+		background-color: #fffcf5;
+		padding: 2% 6%;
+	}
+	
+	/* NEW ARRIVALS Button */
+	
+	#homeMain button{
+		left: 0;
+		margin: 0 auto;
+		display: flex;
+		position: relative;
+	}
+	
+	#homeMain button:hover{
+		background-color: #fffcf5;
+		color: black;
+	}
+	
+	/* Most Wanted */
+	
+	#homeMostWanted{
+		overflow-x: scroll;
+		scroll-snap-type: x mandatory;
+		width: auto;
+		display: flex;
+	}
+	
+	.homeMostWantedItems{
+		flex-shrink: 0;
+		scroll-snap-align: center;
+		height: 100vw;
+	}
+	
+	#homeMostWanted img{
+		height: 100vw;
+		margin: 0 3vw;
+		width: auto;
 	}
 	
 	#homeLeftImage{
+		margin-left: 1.5vw;
 	}
 	
 	#homeRightImage{
+		padding-right: 2vw;
 	}
 	
-	/* Earrings styles */
-	
-	.earringsSection{
-		justify-content: center;
+	#homeMostWanted::after{
+		display: none;
 	}
 	
-	.earringsSection img{
-		width: 95%;
+	/* Most Wanted Buttons */
+	
+	#homeMostWanted button{
+		top: -20vw;
 	}
 	
-	.earringsItemBox{
-		width: 30%;
+	/* Styling */
+	
+	#homeStyling{
+		overflow-x: scroll;
+		scroll-snap-type: x mandatory;
 	}
 	
-	.earringsInfoBox{
-		width: 90%;
+	.homeStylingImages{
+		flex-shrink: 0;
+		scroll-snap-align: center;
+		width: 80%;
 	}
 	
-	.earringsSection p{
+	#homeStyling img{
+		
+		width: auto;
+		height: 100vw;
+	}
+	
+	#homeStylingCenterImg{
+		
+	}
+	
+	#homeStyling::after{
+		display: none;
+	}
+	
+	/* Scrollbar Style */
+	
+	::-webkit-scrollbar{
+		
+	}
+	
+	::-webkit-scrollbar-track{
+		
+	}
+	
+	::-webkit-scrollbar-thumb{
+		
+	}
+	
+	/* Footer */
+	
+	.footerTop{
+		flex-direction: column;
+	}
+	
+	.footerTop h3{
+		font-size: 5vw;
+		padding-top: 4vw;
+	}
+	
+	.footerTopLeft{
+		justify-content: space-between;
+	}
+	
+	.footerMenu{
 		margin: 0;
 	}
 	
+	.footerTop a, .footerTop p, .footerTop input, .footerBottomPrint p{
+		font-size: 4vw;
+	}
+	
+	#footerSubmitEmail{
+		padding-bottom: 3vw;
+		align-items: center;
+	}
+	
 }
-
