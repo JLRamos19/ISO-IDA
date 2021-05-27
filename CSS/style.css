@@ -32,6 +32,13 @@ body{
 header a{
 	text-decoration: none;
 	color: black;
+	font-family: "leksa-sans";
+	font-size: 20px;
+	margin: 0 5px;
+}
+
+header a:hover{
+	color: #525b56;
 }
 
 /* Main Menu */
@@ -102,7 +109,7 @@ header a{
 .menuSection:hover .menuList{
 	display: block;
 	position: absolute;
-	animation: dropDown 1s;
+	animation: dropDown .5s;
 	background-color: rgba(255,255,255,0.65);
 }
 
@@ -181,7 +188,7 @@ button{
 	border: none;
 	border-radius: 0;
 	background-color: rgba(255,255,255,0.65);
-	padding: .75% 1%;
+	padding: .75% 2%;
 	cursor: pointer;
 }
 
@@ -404,27 +411,34 @@ footer li{
 }
 
 footer input{
-	margin-top: 15px;
+	margin: auto 0;
 	padding: 10px;
+	padding-right: 45px;
 	font-size: 16px;
 	color: black;
+	z-index: 0;
+	width: 300px;
 }
 
 .footerTop{
-	display: flex;
+	display: block;
 	justify-content: space-between;
 	margin: 0 5%;
+	height: 200px;
 }
 
 .footerTopLeft{
 	flex-direction: row;
 	display: flex;
 	width: 50%;
+	float: left;
 }
 
 .footerTopRight{
-	display: flex;
 	flex-direction: column;
+	width: 50%;
+	float: right;
+	padding-left: 10%;
 }
 
 .footerMenu{
@@ -433,12 +447,16 @@ footer input{
 	margin-right: 10%;
 }
 
+.footerTopRight div{
+	display: flex;
+}
 
 #footerSubmitEmail{
 	font-size: 30px;
-	position: absolute;
-	margin-top: 155px;
-	margin-left: 237.5px;
+	width: 30px;
+	position: relative;
+	z-index: 1;
+	margin: auto 0 auto -40px;
 	background-color: #BCC3BE;
 	cursor: pointer;
 	color: white;
@@ -451,7 +469,6 @@ footer input{
 
 
 .footerBottomPrint{
-	position: relative;
 	margin: 0 auto;
 }
 
@@ -701,20 +718,32 @@ footer input{
 	}
 	
 	.footerTopLeft{
-		justify-content: space-between;
+		justify-content: space-around;
+		width: 80%;
+	}
+	
+	.footerTopRight{
+		margin: auto;
 	}
 	
 	.footerMenu{
 		margin: 0;
-	}
+ 	}
 	
 	.footerTop a, .footerTop p, .footerTop input, .footerBottomPrint p{
 		font-size: 4vw;
 	}
 	
+	footer input{
+		width: 80%;
+		padding: 1.5vw;
+	}
+	
 	#footerSubmitEmail{
-		padding-bottom: 3vw;
-		align-items: center;
+		padding: 1vw 1vw;
+		margin: auto 0 auto -7.5vw;
+		width: auto;
+		font-size: 4vw;
 	}
 	
 }
