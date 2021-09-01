@@ -11,44 +11,47 @@
 <body>
 	<!-- Navigation menu -->
 
-		<header id="earringsHeader">
-			
-			<nav>
-			
-				<div id="logo">
-				  <a href="index.html"><span class="logoFont1">ISOBEL</span><span class="logoFont2">and</span><span class="logoFont1">IDALY</span></a>
-				</div>
-				
-				<div id="menu">
-					<div id="menuDropDown">
-						<div class="menuSection">
-							<span>Shop</span>
-								<ul class="menuList">
-									<li class="menuDropDown-item1"><a href="earrings.html">Earrings</a></li>
-									<li class="menuDropDown-item2"><a href="">Necklaces</a></li>
-									<li class="menuDropDown-item3"><a href="">Rings</a></li>
-								</ul>
+		<div class="mainMenu">
+			<header>
+				<nav>
+					
+					<div class="hamburgerMenu">
+					<span class="material-icons-outlined">menu</span>
+					</div>
+					
+					<div id="logo">
+					  <a href="index.html"><span class="logoFont1">ISOBEL</span><span class="logoFont2">and</span><span class="logoFont1">IDALY</span></a>
+					</div>
+
+					<div id="menu">
+						<div id="menuDropDown">
+							<div class="menuSection">
+								<span onclick="">Shop</span>
+									<ul class="menuList" id="menuListShop">
+										<li class="menuDropDown-item1"><a href="earrings.html">Earrings</a></li>
+										<li class="menuDropDown-item2"><a href="">Necklaces</a></li>
+										<li class="menuDropDown-item3"><a href="">Rings</a></li>
+									</ul>
+							</div>
+					
+							<div class="menuSection">
+								<span onClick="">About</span>
+									<ul class="menuList" id="menuListAbout">
+										<li class="menuDropDown-item1"><a href="">Meet us!</a></li>
+										<li class="menuDropDown-item2"><a href="">FAQ</a></li>
+										<li class="menuDropDown-item3"><a href="">Contact us</a></li>
+									</ul>
+							</div>
 						</div>
 						
-						<div class="menuSection">
-							<span>About</span>
-								<ul class="menuList">
-									<li class="menuDropDown-item1"><a href="">Meet us!</a></li>
-									<li class="menuDropDown-item2"><a href="">FAQ</a></li>
-									<li class="menuDropDown-item3"><a href="">Contact us</a></li>
-								</ul>
+						<div id="menuIcons">
+							<span class="material-icons-outlined" id="menuSearch">search</span>
+							<span class="material-icons-outlined">shopping_bag</span>
 						</div>
 					</div>
-
-
-					<div id="menuIcons">
-						<span class="material-icons-outlined" id="menuSearch">search</span>
-						<span class="material-icons-outlined">shopping_bag</span>
-					</div>
-				</div>
-			</nav>
-		
-		</header>
+				</nav>
+			</header>
+		</div>
 	
 		<article id="earringsArticle">
 			<div id="earringsHeading">
@@ -168,16 +171,16 @@
 				</div>
 			
 			<div class="footerTopLeft">
-					<div class="footerMenu">
+					<div class="footerMenu" id="footerMenuShop">
 					<h3>SHOP</h3>
 						<ul>
-							<li><a href="">EARRINGS</a></li>
+							<li><a href="earrings.html">EARRINGS</a></li>
 							<li><a href="">NECKLACES</a></li>
 							<li><a href="">RINGS</a></li>
 						</ul>
 					</div>
 
-					<div class="footerMenu">
+					<div class="footerMenu" id="footerMenuAbout">
 					<h3>ABOUT</h3>
 						<ul>
 							<li><a href="">MEET US :)</a></li>

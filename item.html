@@ -10,47 +10,50 @@
 
 	<body>
 		
-		<header>
-			
-			<nav>
-			
-				<div id="logo">
-				  <a href="index.html"><span class="logoFont1">ISOBEL</span><span class="logoFont2">and</span><span class="logoFont1">IDALY</span></a>
-				</div>
-				
-				<div id="menu">
-					<div id="menuDropDown">
-						<div class="menuSection">
-							<span>Shop</span>
-								<ul class="menuList">
-									<li class="menuDropDown-item1"><a href="earrings.html">Earrings</a></li>
-									<li class="menuDropDown-item2"><a href="">Necklaces</a></li>
-									<li class="menuDropDown-item3"><a href="">Rings</a></li>
-								</ul>
+		<div class="mainMenu">
+			<header>
+				<nav>
+					
+					<div class="hamburgerMenu">
+					<span class="material-icons-outlined">menu</span>
+					</div>
+					
+					<div id="logo">
+					  <a href="index.html"><span class="logoFont1">ISOBEL</span><span class="logoFont2">and</span><span class="logoFont1">IDALY</span></a>
+					</div>
+
+					<div id="menu">
+						<div id="menuDropDown">
+							<div class="menuSection">
+								<span onclick="">Shop</span>
+									<ul class="menuList" id="menuListShop">
+										<li class="menuDropDown-item1"><a href="earrings.html">Earrings</a></li>
+										<li class="menuDropDown-item2"><a href="">Necklaces</a></li>
+										<li class="menuDropDown-item3"><a href="">Rings</a></li>
+									</ul>
+							</div>
+					
+							<div class="menuSection">
+								<span onClick="">About</span>
+									<ul class="menuList" id="menuListAbout">
+										<li class="menuDropDown-item1"><a href="">Meet us!</a></li>
+										<li class="menuDropDown-item2"><a href="">FAQ</a></li>
+										<li class="menuDropDown-item3"><a href="">Contact us</a></li>
+									</ul>
+							</div>
 						</div>
 						
-						<div class="menuSection">
-							<span>About</span>
-								<ul class="menuList">
-									<li class="menuDropDown-item1"><a href="">Meet us!</a></li>
-									<li class="menuDropDown-item2"><a href="">FAQ</a></li>
-									<li class="menuDropDown-item3"><a href="">Contact us</a></li>
-								</ul>
+						<div id="menuIcons">
+							<span class="material-icons-outlined" id="menuSearch">search</span>
+							<span class="material-icons-outlined">shopping_bag</span>
 						</div>
 					</div>
-
-
-					<div id="menuIcons">
-						<span class="material-icons-outlined">search</span>
-						<span class="material-icons-outlined">shopping_bag</span>
-					</div>
-				</div>
-			</nav>
+				</nav>
+			</header>
+		</div>
 		
-		</header>
-		
-		<article id="itemArticle">
-		
+		<article id="itemArticleTopBar">
+		<div id="itemArticle">
 			<section id="itemMedia">
 				<div class="itemMediaMain">
 					<img src="https://s3.amazonaws.com/iso.ida/Images/Earrings/earring1.jpg" alt="Earrings">
@@ -90,22 +93,40 @@
 			</section>
 			
 			
-		
+		</div>
 		</article>
 		
-		<section id="homeSectionStyling">
+		<section id="itemHowAboutThese">
 				<h2>How about these?</h2>
-				<div class="homeStyling">
-					<div class="homeStylingImages">
-					<img src="https://s3.amazonaws.com/iso.ida/Images/Home/QueenPurple.jpeg" alt="Female model reading book and wearing purple dress and displaying earrings">
+				<div class="itemHowAboutTheseContent">
+					<div class="itemHowAboutTheseImages" id="itemHowAboutTheseImage1">
+					<img src="https://s3.amazonaws.com/iso.ida/Images/Earrings/earring1.jpg" alt="Female model reading book and wearing purple dress and displaying earrings">
+						<div class="itemHowAboutTheseInfo">
+							<p>
+								<a href="item.html" class="itemHowAboutTheseName">Stephanie</a>
+								<span class="itemHowAboutThesePrice">$36</span>
+							</p>
+						</div>
 					</div>
 					
-					<div class="homeStylingImages">
-					<img src="https://s3.amazonaws.com/iso.ida/Images/Home/QueenTerra.jpeg" alt="Female model looking at her reflection in the mirror and displaying earrings" id="homeStylingCenterImg">
+					<div class="itemHowAboutTheseImages">
+					<img src="https://s3.amazonaws.com/iso.ida/Images/Earrings/earring1.jpg" alt="Female model looking at her reflection in the mirror and displaying earrings">
+						<div class="itemHowAboutTheseInfo">
+							<p>
+								<a href="item.html" class="itemHowAboutTheseName">Susan</a>
+								<span class="itemHowAboutThesePrice">$58</span>
+							</p>
+						</div>
 					</div>
 					
-					<div class="homeStylingImages">
-					<img src="https://s3.amazonaws.com/iso.ida/Images/Home/QueenGreen.jpeg" alt="Female model with green dress, touching plant displaying earrings">
+					<div class="itemHowAboutTheseImages">
+					<img src="https://s3.amazonaws.com/iso.ida/Images/Earrings/earring1.jpg" alt="Female model with green dress, touching plant displaying earrings">
+						<div class="itemHowAboutTheseInfo">
+							<p>
+								<a href="item.html" class="itemHowAboutTheseName">Sarah</a>
+								<span class="itemHowAboutThesePrice">$41</span>
+							</p>
+						</div>
 					</div>
 					
 				</div>
@@ -128,7 +149,7 @@
 					<div class="footerMenu">
 					<h3>SHOP</h3>
 						<ul>
-							<li><a href="">EARRINGS</a></li>
+							<li><a href="earrings.html">EARRINGS</a></li>
 							<li><a href="">NECKLACES</a></li>
 							<li><a href="">RINGS</a></li>
 						</ul>
@@ -143,7 +164,7 @@
 						</ul>
 					</div>
 				</div>
-							</div>
+			</div>
 
 			<div class="footerBottomPrint">
 			

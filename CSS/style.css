@@ -25,9 +25,9 @@
 }
 
 body{
-	margin: 0 auto;
+	background-color: #fffcf5;
+	margin: 0 15%;
 }
-
 
 header a{
 	text-decoration: none;
@@ -111,7 +111,7 @@ header a:hover{
 	display: block;
 	position: absolute;
 	animation: dropDown .5s;
-	background-color: rgba(255,255,255,0.65);
+	background-color: rgba(255,255,255,0.85);
 }
 
 /* Menu Animation */
@@ -123,7 +123,7 @@ header a:hover{
 	
 	100%{
 		opacity: 1;
-		background-color: rgba(255,255,255,0.65);
+		background-color: rgba(255,255,255,0.85);
 	}
 }
 
@@ -132,6 +132,10 @@ header a:hover{
 	z-index: 1;
 	
 	
+}
+
+.showMenuList{
+	display: block;
 }
 
 .menuList li{
@@ -154,19 +158,12 @@ header a:hover{
 	cursor: pointer;
 }
 
-
-
-body{
-	background-color: #fffcf5;
-	margin: 0 15%;
-}
-
 main{
 	margin: 0 auto;
 	background-image: url("https://s3.amazonaws.com/iso.ida/Images/Home/GroupShot.JPG");
 	background-position: center;
 	background-size: cover;
-	height: 40vw;
+	height: 30vw;
 	width: 90%;
 }
 
@@ -175,7 +172,7 @@ main{
 	display: block;
 	position: absolute;
 	background-color: #BCC3BE;
-	height: 30vw;
+	height: 25vw;
 	width: 100%;
 	z-index: -1;
 	top: -70px;
@@ -215,8 +212,9 @@ button:hover{
 /* Button in Home's Main */
 
 #homeMain button{
+	position: relative;
 	top: 75%;
-	left: 80%;
+	float: right;
 }
 
 #homeMain::after{
@@ -305,8 +303,8 @@ h4{
 	position: relative;
 	flex-direction: row;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
-	margin-bottom: 3vw;
 }
 
 .homeStylingImages{
@@ -322,15 +320,16 @@ h4{
 
 .homeStyling::after{
 	content: '';
-	display: flex;
-	justify-content: flex-start;
-	position: absolute;
+	display: block;
+	position: relative;
 	background-color: #BCC3BE;
 	height: 1vw;
 	width: 59.5vw;
-	margin-top: 28.75vw;
-	margin-bottom: 1vw;
+	margin: 1vw 0;
 }
+
+
+
 
 /* ------ Earrings Styles ------ */
 
@@ -346,50 +345,58 @@ h4{
 	letter-spacing: 0.75px;
 }
 
-#earringsHeader::before{
+#earringsHeading::before{
 	content: '';
 	display: block;
 	position: absolute;
 	background-color: #BCC3BE;
-	margin-top: 95px;
-	padding-bottom: 0.5vw;
+	height: 0.5vw;
 	width: 70%;
 	z-index: -1;
 }
 
-#earringsHeader::after{
+#earringsSection2{
+	
+}
+
+#earringsArticle::before{
 	content: '';
-	display: block;
+	display: flex;
 	position: absolute;
 	background-color: rgba(188, 195, 190, 0.45);
-	margin-top: 44px;
-	padding-bottom: 20vw;
+	height: 20vw;
+	margin-top: 40px;
 	width: 70%;
 	z-index: -1;
 	
 }
 
+#earringsSection5{
+	margin-top: 1vw;
+}
+
 #earringsSection5::before{
 	content: '';
-	display: block;
-	position: absolute;
+	display: flex;
+	position: relative;
 	background-color: #BCC3BE;
-	margin-top: -2.5vw;
-	margin-left: 10%;
-	padding-top: 1vw;
-	width: 50%;
+	height: 1vw;
+	margin-top: -3vw;
+	margin-bottom: 1vw;
+	margin-left: 88%;
+	width: 210%;
 	z-index: -1;
 }
 
-#earringsSection7::after{
+#earringsSection8::after{
 	content: '';
 	display: block;
-	position: absolute;
+	position: relative;
 	background-color: #BCC3BE;
-	margin-top: 28vw;
-	margin-left: 30%;
-	padding-top: 1vw;
-	width: 53.5%;
+	height: 1vw;
+	width: 240%;
+	margin-left: -60%;
+	margin-bottom: 1vw;
 	z-index: -1;
 }
 
@@ -398,8 +405,8 @@ h4{
 	display: block;
 	position: absolute;
 	background-color: rgba(188, 195, 190, 0.45);
-	margin-top: -2.3vw;
-	padding-bottom: 18vw;
+	margin-top: -2vw;
+	height: 20vw;
 	width: 70%;
 	z-index: -1;
 }
@@ -425,11 +432,6 @@ h4{
 	width: 33.33%;
 }
 
-.earringsItemBoxes1, .earringsItemBoxes2{
-	margin-top: 1.3vw;
-}
-
-
 #earringsArticle img{
 	border: thick #525b56 solid;
 	width: 80%;
@@ -447,15 +449,13 @@ h4{
 }
 
 .earringsInfoBox{
-	margin: 10px 0 55px;
+	margin: 10px 0 50px;
 	width: 80%;
 }
 
 .earringItemName{
 	text-decoration: none;
 	color: black;
-	float: left;
-	text-align: left;
 }
 
 .earringItemName:hover{
@@ -477,8 +477,6 @@ h4{
 }
 
 .earringItemPrice{
-	float: right;
-	text-align: right;
 }
 
 .earringsMobile{
@@ -492,13 +490,13 @@ h4{
 	margin-bottom: 1vw;
 }
 
-#itemArticle::before{
+#itemArticleTopBar::before{
 	content: '';
 	display: block;
-	position: absolute;
+	position: relative;
 	background-color: #BCC3BE;
-	padding-bottom: 0.5vw;
-	width: 70%;
+	height: 0.5vw;
+	width: 100%;
 	z-index: -1;
 }
 
@@ -573,7 +571,7 @@ h4{
 	position: relative;
 	margin-top: 10px;
 	margin-left: -20%;
-	padding-bottom: 1vw;
+	height: 1vw;
 	width: 120%;
 	z-index: -1;
 }
@@ -594,6 +592,76 @@ h4{
 	color: white;
 }
 
+
+/* 'How about these?' Section */
+
+#itemHowAboutThese{
+	
+}
+
+#itemHowAboutThese::before{
+	content: '';
+	display: block;
+	position: absolute;
+	background-color: rgba(188, 195, 190, 0.45);
+	padding-left: 0;
+	height: 22.5vw;
+	width: 70%;
+	z-index: -1;
+}
+
+#itemHowAboutThese h2{
+	letter-spacing: 1px;
+	font-weight: normal;
+	padding-left: 2.5%;
+}
+
+.itemHowAboutTheseContent{
+	position: relative;
+	flex-direction: row;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 1vw;
+	padding: 0 2%;
+}
+
+.itemHowAboutTheseImages{
+	width: 30%;
+	
+}
+
+.itemHowAboutTheseContent img{
+	width: 100%;
+	border: thick solid #525b56;
+}
+
+#itemHowAboutTheseImage1::after{
+	content: '';
+	display: flex;
+	justify-content: flex-start;
+	position: relative;
+	background-color: #BCC3BE;
+	height: 1vw;
+	width: 59.5vw;
+	margin-left: -7%;
+	margin-bottom: 1vw;
+}
+
+.itemHowAboutTheseContent p{
+	color: black;
+	font-size: 22px;
+	font-weight: 300;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 2.5%;
+	font-family: "leksa-sans";
+}
+
+.itemHowAboutTheseName{
+	text-decoration: none;
+	color: black;
+}
 
 /* Footer */
 
@@ -631,11 +699,12 @@ footer input{
 	color: black;
 	z-index: 0;
 	width: 300px;
+	border-radius: 0;
+	border: none;
 }
 
 .footerTop{
 	display: block;
-	justify-content: space-between;
 	margin: 0 5%;
 	height: 200px;
 }
@@ -643,21 +712,24 @@ footer input{
 .footerTopLeft{
 	flex-direction: row;
 	display: flex;
-	width: 50%;
-	float: left;
+	width: auto;
 }
 
 .footerTopRight{
 	flex-direction: column;
-	width: 50%;
+	width: auto;
 	float: right;
-	padding-left: 10%;
 }
 
 .footerMenu{
 	display: flex;
 	flex-direction: column;
-	margin-right: 10%;
+	margin-right: 20%;
+	
+}
+
+#footerMenuAbout{
+	
 }
 
 .footerTopRight div{
@@ -688,17 +760,156 @@ footer input{
 .footerBottomPrint p{
 	text-align: center;
 	padding-top: 40px;
-	font-size: 22px;
+	padding-bottom: 15px;
+	font-size: 16px;
+	font-weight: normal;
 }
 
 /* Responsive Webpage Settings */
+
+/* 4K Settings */
+
 @media screen and (min-width: 1920px){
+	body{
+		max-width: 1440px;
+		margin: 0 auto;
+	}
 	
+	main{
+		height: 700px;
+	}
+	
+	#homeMain::before{
+		height: 550px;
+	}
+	
+	#homeMain button{
+	}
+	
+	#homeMostWanted::after{
+		height: 350px;
+	}
+	
+	
+	
+	button{
+		font-size: 24px;
+		letter-spacing: 2px;
+	}
+	
+	#earringsHeading::before{
+		width: 1440px;
+		height: 8px;
+	}
+	
+	.homeStyling::after{
+		width: 1215px;
+		height: 20px;
+	}
+	
+	#earringsSection5{
+		margin-top: 25px;
+	}
+	
+	#earringsSection5::before{
+		height: 20px;
+		margin-top: -70px;
+		margin-bottom: 25px;
+	}
+	
+	#earringsSection8::after{
+		width: 1215px;
+		margin-left: -225px;
+		height: 20px;
+	}
+	
+	#earringsArticle::before, #earringsSection8::before{
+		width: 1440px;
+		height: 400px;
+	}
+	
+	#earringsSection8::before{
+		margin-top: -25px;
+	}
+	
+	#itemHowAboutThese::before{
+		width: 1440px;
+		height: 400px;
+	}
+	
+	#itemArticleTopBar::before{
+		height: 10px;
+	}
+	
+	#itemHowAboutTheseImage1::after{
+		width: 1215px;
+		height: 20px;
+	}
 }
 
+/* Tablet Version */
+
 @media screen and (max-width: 1023px){
+	body{
+		margin: 0 5%;
+	}
 	
+	main{
+		height: 400px;
+	}
+	
+	#homeMain::before{
+		height: 35vw;
+	}
+	
+	#earringsHeading::before{
+		width: 90%;
+	}
+	
+	#earringsArticle::before, #earringsSection8::before, #itemHowAboutThese::before{
+		height: 25vw;
+		width: 90%;
+	}
+	
+	#earringsSection8::after{
+	}
+	
+	#itemHowAboutThese::after{
+		width: 90%;
+		margin-top: -45vw;
+		height: 30vw;
+	}
 }
+
+/* Tablet Portrait Version */
+
+@media screen and (max-width: 1023px) and (orientation: portrait){
+	body{
+		margin: 0 5%;
+	}
+	
+	main{
+		height: 40vw;
+	}
+	
+	#homeMain::before{
+		height: 32.5vw;
+	}
+	
+	#homeMain button{
+		padding: 1% 2%;
+	}
+	
+	.homeStyling::after{
+		width: 70vw;
+	}
+	
+	button{
+		font-size: 14px;
+	}
+}
+
+/* Mobile version */
 
 @media screen and (max-width: 767px){
 	body{
@@ -768,7 +979,7 @@ footer input{
 		padding: 0 2vw;
 	}
 	
-	.material-icons-outlined{
+	span.material-icons-outlined{
 		padding: 0 2vw;
 		font-size: 7vw;
 	}
@@ -817,7 +1028,7 @@ footer input{
 		position: absolute;
 		font-family: leksa-sans;
 		font-weight: 300;
-		font-size: 6vw;
+		font-size: 5vw;
 		letter-spacing: .15vw;
 		border: none;
 		border-radius: 0;
@@ -828,15 +1039,22 @@ footer input{
 	/* NEW ARRIVALS Button */
 	
 	#homeMain button{
-		left: 0;
+		float: none;
 		margin: 0 auto;
 		display: flex;
-		position: relative;
+		
 	}
 	
 	#homeMain button:hover{
-		background-color: #fffcf5;
+		background-color: white;
 		color: black;
+	}
+	
+	/* Home Headings */
+	
+	#homeArticle h2{
+		font-size: 5vw;
+		padding: 3.5vw 5vw 1.5vw;
 	}
 	
 	/* Most Wanted */
@@ -883,12 +1101,15 @@ footer input{
 	.homeStyling{
 		overflow-x: scroll;
 		scroll-snap-type: x mandatory;
+		margin-bottom: 10vw;
+		flex-wrap: nowrap;
 	}
 	
 	.homeStylingImages{
 		flex-shrink: 0;
 		scroll-snap-align: center;
 		width: 80%;
+		
 	}
 	
 	.homeStyling img{
@@ -921,7 +1142,11 @@ footer input{
 	
 	/* Earrings Page */
 	
-	#earringsHeader::after{
+	#earringsHeading::before{
+		display: none;
+	}
+	
+	#earringsArticle::before{
 		display: none;
 	}
 	
@@ -930,9 +1155,24 @@ footer input{
 		padding-top: 5vw;
 	}
 	
+	#earringsArticle img{
+		width: 90%;
+	}
+	
+	#earringsArticle p{
+	}
+	
+	.earringsInfoBox{
+		width: 90%;
+	}
+	
 	.earringsItemBox{
 		width: 50%;
+		margin-top: 0;
 	}
+	.earringsItemBoxes2{
+	margin-top: 1.3vw;
+}
 	
 	.earringsMobile{
 		display: flex;
@@ -944,7 +1184,11 @@ footer input{
 		display: none;
 	}
 	
-	#earringsSection7::after{
+	#earringsSection5{
+		margin-top: 0;
+	}
+	
+	#earringsSection8::after{
 		display: none;
 	}
 	
@@ -956,29 +1200,43 @@ footer input{
 		
 	}
 	
+	/* Item Page */
+	
+	#itemArticleTopBar::before{
+		display: none;
+	}
+	
+	
 	
 	/* Footer */
 	
 	.footerTop{
-		flex-direction: column;
+		height: auto;
 	}
 	
 	.footerTop h3{
 		font-size: 5vw;
 		padding-top: 4vw;
+		
 	}
 	
 	.footerTopLeft{
 		justify-content: space-around;
-		width: 80%;
+		width: 100%;
+		height: auto;
+		
 	}
 	
 	.footerTopRight{
 		margin: auto;
+		width: 100%;
+		padding-left: 10%;
+		margin-bottom: 3vw;
 	}
 	
 	.footerMenu{
 		margin: 0;
+		margin-left: -4.5vw;
  	}
 	
 	.footerTop a, .footerTop p, .footerTop input, .footerBottomPrint p{
@@ -986,7 +1244,7 @@ footer input{
 	}
 	
 	footer input{
-		width: 80%;
+		width: 70vw;
 		padding: 1.5vw;
 	}
 	
@@ -997,5 +1255,15 @@ footer input{
 		font-size: 4vw;
 	}
 	
-}#itemDetailsHeading {
+	.footerBottomPrint{
+		
+		padding-left: 13%;
+	}
+	
+	.footerBottomPrint p{
+		text-align: left;
+		padding-top: 6vw;
+		padding-bottom: 4vw;
+	}
+	
 }
